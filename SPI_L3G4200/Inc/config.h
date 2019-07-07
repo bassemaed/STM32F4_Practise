@@ -25,28 +25,28 @@ SPI_HandleTypeDef						SpiHandle1;
 #define USARTx_FORCE_RESET()            __HAL_RCC_USART3_FORCE_RESET()
 #define USARTx_RELEASE_RESET()          __HAL_RCC_USART3_RELEASE_RESET()
 
-#define SPIx                            SPI1
-#define SPIx_CLK_ENABLE()              	__HAL_RCC_SPI1_CLK_ENABLE()
-#define SPIx_SCK_GPIO_CLK_ENABLE()     	__HAL_RCC_GPIOA_CLK_ENABLE()
+#define SPIx                            SPI2
+#define SPIx_CLK_ENABLE()              	__HAL_RCC_SPI2_CLK_ENABLE()
+#define SPIx_SCK_GPIO_CLK_ENABLE()     	__HAL_RCC_GPIOD_CLK_ENABLE()
 #define SPIx_MISO_GPIO_CLK_ENABLE()     __HAL_RCC_GPIOB_CLK_ENABLE()
 #define SPIx_MOSI_GPIO_CLK_ENABLE()     __HAL_RCC_GPIOB_CLK_ENABLE()
-#define SPIx_NSS_GPIO_CLK_ENABLE()		__HAL_RCC_GPIOA_CLK_ENABLE()
+#define SPIx_NSS_GPIO_CLK_ENABLE()		__HAL_RCC_GPIOH_CLK_ENABLE()
 
-#define SPIx_FORCE_RESET()              __HAL_RCC_SPI1_FORCE_RESET()
-#define SPIx_RELEASE_RESET()            __HAL_RCC_SPI1_RELEASE_RESET()
+#define SPIx_FORCE_RESET()              __HAL_RCC_SPI2_FORCE_RESET()
+#define SPIx_RELEASE_RESET()            __HAL_RCC_SPI2_RELEASE_RESET()
 
 /* Definition for SPIx Pins */
-#define SPIx_SCK_PIN                    GPIO_PIN_5
-#define SPIx_SCK_GPIO_PORT              GPIOA
-#define SPIx_SCK_AF                     GPIO_AF5_SPI1
-#define SPIx_MISO_PIN                   GPIO_PIN_4
+#define SPIx_SCK_PIN                    GPIO_PIN_3
+#define SPIx_SCK_GPIO_PORT              GPIOD
+#define SPIx_SCK_AF                     GPIO_AF5_SPI2
+#define SPIx_MISO_PIN                   GPIO_PIN_14
 #define SPIx_MISO_GPIO_PORT             GPIOB
-#define SPIx_MISO_AF                    GPIO_AF5_SPI1
-#define SPIx_MOSI_PIN                   GPIO_PIN_5
+#define SPIx_MISO_AF                    GPIO_AF5_SPI2
+#define SPIx_MOSI_PIN                   GPIO_PIN_15
 #define SPIx_MOSI_GPIO_PORT             GPIOB
-#define SPIx_MOSI_AF                    GPIO_AF5_SPI1
-#define SPIx_NSS_PIN                    GPIO_PIN_15
-#define SPIx_NSS_GPIO_PORT              GPIOA
+#define SPIx_MOSI_AF                    GPIO_AF5_SPI2
+#define SPIx_NSS_PIN                    GPIO_PIN_6
+#define SPIx_NSS_GPIO_PORT              GPIOH
 
 #define L3G4200_WHO_AM_I				0x0F
 #define L3G4200_CTRL_REG_1				0x20
