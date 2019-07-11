@@ -425,6 +425,174 @@ Discarded input sections
  .comment       0x0000000000000000       0x6f ./system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text          0x0000000000000000        0x0 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .data          0x0000000000000000        0x0 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .bss           0x0000000000000000        0x0 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.DMA_SetConfig
+                0x0000000000000000       0x2c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.DMA_CalcBaseAndBitshift
+                0x0000000000000000       0x3c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.DMA_CheckFifoParam
+                0x0000000000000000       0x9e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_Init
+                0x0000000000000000      0x27c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_DeInit
+                0x0000000000000000       0x58 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_Start
+                0x0000000000000000       0x78 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_Start_IT
+                0x0000000000000000       0xa4 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_Abort
+                0x0000000000000000       0x94 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_Abort_IT
+                0x0000000000000000       0x26 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_PollForTransfer
+                0x0000000000000000      0x124 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_IRQHandler
+                0x0000000000000000      0x1e4 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_RegisterCallback
+                0x0000000000000000       0x5e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_UnRegisterCallback
+                0x0000000000000000       0x70 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_GetState
+                0x0000000000000000        0x6 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .text.HAL_DMA_GetError
+                0x0000000000000000        0x4 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .rodata.HAL_DMA_Init.str1.4
+                0x0000000000000000       0x2e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .rodata.flagBitshiftOffset.7390
+                0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_info    0x0000000000000000     0x140f ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_abbrev  0x0000000000000000      0x32a ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_loc     0x0000000000000000      0xb54 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_aranges
+                0x0000000000000000       0x90 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_ranges  0x0000000000000000       0x80 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x310 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x8b6 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x18c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x31 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x28 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x34e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x35 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x50 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0xe66 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000     0xbbad ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x43 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000     0x34ef ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x22 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x4c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x8d ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x35 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x9c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x16 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x57 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x97 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x30d ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0xfd ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x10 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x52 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x1f ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x43 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x20 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x187 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x10 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x6a ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x1c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x52 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x40 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x10 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x40 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0xd7 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x16 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x18b ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x57 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0xdc4 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x9e1 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x11e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x192 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x27 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x287 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x5f ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x23a ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x36e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x13a ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x41d ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x2e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x1a7 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x22 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0xa5 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x11e ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0xf0 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000       0x89 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x202 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x287 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_macro   0x0000000000000000      0x12c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_line    0x0000000000000000      0x9db ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_str     0x0000000000000000    0x7b90c ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .comment       0x0000000000000000       0x6f ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .debug_frame   0x0000000000000000      0x184 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
  .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o
  .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o
  .group         0x0000000000000000        0x8 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o
@@ -4188,6 +4356,7 @@ Linker script and memory map
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal.o
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.o
+LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_flash_ex.o
 LOAD ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o

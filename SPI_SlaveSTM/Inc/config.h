@@ -10,7 +10,7 @@
 UART_HandleTypeDef                      UartHandle1;
 SPI_HandleTypeDef						SpiHandle1;
 
-//#define MASTER_BOARD
+#define MASTER_BOARD
 
 #define USARTx                          USART3
 #define USARTx_CLK_ENABLE()             __HAL_RCC_USART3_CLK_ENABLE()

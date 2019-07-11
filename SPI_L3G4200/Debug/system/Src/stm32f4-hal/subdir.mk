@@ -7,6 +7,7 @@ C_SRCS += \
 ../system/Src/stm32f4-hal/stm32f4xx_hal.c \
 ../system/Src/stm32f4-hal/stm32f4xx_hal_cortex.c \
 ../system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.c \
+../system/Src/stm32f4-hal/stm32f4xx_hal_dma.c \
 ../system/Src/stm32f4-hal/stm32f4xx_hal_flash.c \
 ../system/Src/stm32f4-hal/stm32f4xx_hal_flash_ex.c \
 ../system/Src/stm32f4-hal/stm32f4xx_hal_gpio.c \
@@ -23,6 +24,7 @@ OBJS += \
 ./system/Src/stm32f4-hal/stm32f4xx_hal.o \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.o \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.o \
+./system/Src/stm32f4-hal/stm32f4xx_hal_dma.o \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.o \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash_ex.o \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.o \
@@ -39,6 +41,7 @@ C_DEPS += \
 ./system/Src/stm32f4-hal/stm32f4xx_hal.d \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_cortex.d \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_dfsdm.d \
+./system/Src/stm32f4-hal/stm32f4xx_hal_dma.d \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash.d \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_flash_ex.d \
 ./system/Src/stm32f4-hal/stm32f4xx_hal_gpio.d \
