@@ -52,6 +52,7 @@ void GpioConfig(void){
 	BSP_LED_Init(LED2);
 	BSP_LED_Init(LED3);
 	BSP_LED_Init(LED4);
+
 }
 void UartConfig(void){
     UartHandle1.Instance                    = USARTx;
@@ -82,22 +83,35 @@ int Print (__const char * format, ...) {
     return size;
 }
 void I2CConfig(void){
-	I2CHandle1.Instance =  I2Cx;
-	I2CHandle1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-	I2CHandle1.Init.ClockSpeed = 100000;
-	I2CHandle1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+	I2CHandle1.Instance             = I2Cx;
+	I2CHandle1.Init.ClockSpeed      = 10000;
+	I2CHandle1.Init.DutyCycle       = I2C_DUTYCYCLE_2;
+	I2CHandle1.Init.OwnAddress1     = 0x00;
+	I2CHandle1.Init.AddressingMode  = I2C_ADDRESSINGMODE_7BIT;
 	I2CHandle1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-	I2CHandle1.Init.OwnAddress1 = 0;
-	I2CHandle1.Init.OwnAddress2 = 0;
-	I2CHandle1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+	I2CHandle1.Init.OwnAddress2     = 0x00;
 	I2CHandle1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+	I2CHandle1.Init.NoStretchMode   = I2C_NOSTRETCH_DISABLE;
 	if (HAL_I2C_Init(&I2CHandle1) != HAL_OK)
 		Error_Handler();
 }
+StatusTypeDef I2CWriteReg(uint8_t InDeviceAdd,uint8_t InMemAdd,uint8_t* InDataPtr, uint8_t InDataSize){
+	if (HAL_I2C_Mem_Write(&I2CHandle1, InDeviceAdd, InMemAdd, I2C_MEMADD_SIZE_8BIT,InDataPtr,InDataSize, 50) != HAL_OK)
+		return STATUS_ERROR;
+	else
+		return STATUS_OK;
+}
+StatusTypeDef I2CReadReg(uint8_t InDeviceAdd, uint8_t InMemAdd, uint8_t* InDataPtr, uint8_t InDataSize){
+	if (HAL_I2C_Mem_Read(&I2CHandle1, InDeviceAdd, InMemAdd, I2C_MEMADD_SIZE_8BIT, InDataPtr, InDataSize,50) != HAL_OK)
+		return STATUS_ERROR;
+	else
+		return STATUS_OK;
+}
+
 StatusTypeDef BMP_SensorInit(void){
 	uint8_t Data[22];
 	uint8_t i = 0;
-	if (HAL_I2C_Mem_Read(&I2CHandle1, BMP180_ADDRESS, 0xAA, I2C_MEMADD_SIZE_8BIT, &Data[0], 22,1000) != HAL_OK)
+	if(I2CReadReg(BMP180_ADDRESS, 0xAA, Data, 22) != STATUS_OK)
 		Error_Handler();
 	AC1 = 	(int16_t)	(Data[i] << 8 | Data[i + 1]); i += 2;
 	AC2 = 	(int16_t)	(Data[i] << 8 | Data[i + 1]); i += 2;
@@ -115,7 +129,7 @@ StatusTypeDef BMP_SensorInit(void){
 	MC_  = (double)((pow(2,11) / pow(160,2)) * MC);
 	MD_  = (double) (MD / 160.0);
 	/*
-	 * Debugging the EEPROM values
+	 * Printing the EEPROM values
 	Print("AC1 %d  AC2 %d  AC3 %d AC4 %d  AC5 %d AC6 %d \n",AC1,AC2,AC3,AC4,AC5,AC6);
 	Print("B1 %d B2 %d  MB %d MC %d  MD %d  \n",B1,B2,MB,MC,MD);
 	*/
@@ -127,14 +141,89 @@ double BMP_GetTemp(void){
 	long LocalUt = 0;
 	double OutTemp;
 	double LocalA;
-	if (HAL_I2C_Mem_Write(&I2CHandle1, BMP180_ADDRESS, 0xF4, I2C_MEMADD_SIZE_8BIT,&LocalData,1, 100) != HAL_OK)
-		Error_Handler();
+	if (I2CWriteReg(BMP180_ADDRESS,0xF4, &LocalData, 1) != STATUS_OK)
+			Error_Handler();
 	HAL_Delay(5);
-	if (HAL_I2C_Mem_Read(&I2CHandle1, BMP180_ADDRESS, 0xF6, I2C_MEMADD_SIZE_8BIT, &OutputData[0], 2,100) != HAL_OK)
+	if (I2CReadReg(BMP180_ADDRESS, 0xF6,OutputData, 1) != HAL_OK)
 		Error_Handler();
 	LocalUt = (long) (OutputData[0]*256 + OutputData[1]);
-
 	LocalA = (double)(AC5_*(LocalUt - AC6));
 	OutTemp = (double)(LocalA + (MC_ / (LocalA + MD_)));
 	return OutTemp;
+}
+StatusTypeDef L3G4200_SensorInit(void){
+	uint8_t LocalData[2];
+	uint8_t OutputData[2];
+	/* Write CTRL_REG_2 */
+	LocalData[0] = 0x00;
+	I2CWriteReg(L3G4200_ADDRESS_WRITE,L3G4200_CTRL_REG_2,LocalData,1);
+	I2CReadReg(L3G4200_ADDRESS_READ, L3G4200_CTRL_REG_2,OutputData, 1);
+	if(OutputData[0] != 0x00) return STATUS_ERROR;
+	/* Write CTRL_REG_4 */
+	LocalData[0] = 0x00;
+	I2CWriteReg(L3G4200_ADDRESS_WRITE,L3G4200_CTRL_REG_4,LocalData,1);
+	I2CReadReg(L3G4200_ADDRESS_READ, L3G4200_CTRL_REG_4,OutputData, 1);
+	if(OutputData[0] != 0x00) return STATUS_ERROR;
+	/* Write CTRL_REG_5 */
+	LocalData[0] = 0x12;
+	I2CWriteReg(L3G4200_ADDRESS_WRITE,L3G4200_CTRL_REG_5,LocalData,1);
+	I2CReadReg(L3G4200_ADDRESS_READ, L3G4200_CTRL_REG_5,OutputData, 1);
+	if(OutputData[0] != 0x12) return STATUS_ERROR;
+	/* Write CTRL_REG_1 */
+	LocalData[0] = 0x1F;
+	I2CWriteReg(L3G4200_ADDRESS_WRITE,L3G4200_CTRL_REG_1,LocalData,1);
+	I2CReadReg(L3G4200_ADDRESS_READ, L3G4200_CTRL_REG_1,OutputData, 1);
+	if(OutputData[0] != 0x1F) return STATUS_ERROR;
+    /* Check WHO_AM_I */
+	I2CReadReg(L3G4200_ADDRESS_READ, L3G4200_WHO_AM_I, OutputData, 1);
+	if(OutputData[0] != 0xD3) return STATUS_ERROR;
+	return STATUS_OK;
+}
+uint8_t L3G4200_GetData(SensorData* InSensorData){
+	uint8_t LocalDataOut;
+	uint8_t LocalDataHi, LocalDataLo;
+	float LocalTemp;
+	if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_STATUS_REG,(uint8_t*)&LocalDataOut, 1) != STATUS_OK){
+		Error_Handler();
+	}
+    if(LocalDataOut & 0x08){
+    	if(LocalDataOut & 0x80){
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_X_H,(uint8_t*)&LocalDataHi, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_X_L,(uint8_t*)&LocalDataLo, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		InSensorData->DataX = ((LocalDataHi << 8) | LocalDataLo);
+    		LocalTemp = (float)(InSensorData->DataX*8.75*0.001);
+    		InSensorData->DataX = (int16_t)LocalTemp;
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_Y_H,(uint8_t*)&LocalDataHi, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_Y_L,(uint8_t*)&LocalDataLo, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		InSensorData->DataY = ((LocalDataHi << 8) | LocalDataLo);
+    		LocalTemp = (float)(InSensorData->DataY*8.75*0.001);
+    		InSensorData->DataY = (int16_t)LocalTemp;
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_Z_H,(uint8_t*)&LocalDataHi, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		if (I2CReadReg(L3G4200_ADDRESS_READ,L3G4200_OUT_Z_L,(uint8_t*)&LocalDataLo, 1) != STATUS_OK){
+    				Error_Handler();
+    		}
+    		InSensorData->DataZ = ((LocalDataHi << 8) | LocalDataLo);
+    		LocalTemp = (float)(InSensorData->DataZ*8.75*0.001);
+    		InSensorData->DataZ = (int16_t)LocalTemp;
+    		return 1;
+    	}
+    	return 0;
+    }
+    return 0;
+}
+void L3G4200_PrintData(SensorData* InSensorData){
+	Print("X Is: %hd ", InSensorData->DataX);
+	Print("Y Is: %hd ", InSensorData->DataY);
+	Print("Z Is: %hd ", InSensorData->DataZ);
+	Print("\n");
 }

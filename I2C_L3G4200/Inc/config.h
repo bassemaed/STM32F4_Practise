@@ -44,7 +44,9 @@ I2C_HandleTypeDef						I2CHandle1;
 #define I2Cx_SDA_GPIO_PORT              GPIOB
 #define I2Cx_SCL_SDA_AF                 GPIO_AF4_I2C1
 
-#define BMP180_ADDRESS			0xEE
+#define BMP180_ADDRESS					0xEE
+#define L3G4200_ADDRESS_WRITE			0xD2
+#define L3G4200_ADDRESS_READ			0xD3
 
 #define L3G4200_WHO_AM_I				0x0F
 #define L3G4200_CTRL_REG_1				0x20
@@ -60,7 +62,7 @@ I2C_HandleTypeDef						I2CHandle1;
 #define	L3G4200_OUT_Z_H					0x2D
 #define	L3G4200_STATUS_REG				0x27
 
-#define I2C_TIMEOUT_MAX					50
+#define I2C_TIMEOUT_MAX					100
 
 typedef enum {
 	STATUS_OK       = 0x00U,
@@ -76,15 +78,22 @@ typedef struct {
 }SensorData;
 
 void SystemClock_Config(void);
-void Error_Hanlder(void);
+void Error_Handler(void);
 void GpioConfig(void);
 void UartConfig(void);
 int PrintConfig (__const char * format, va_list args);
 int Print (__const char * format, ...);
 void I2CConfig(void);
 
+StatusTypeDef I2CWriteReg(uint8_t,uint8_t,uint8_t*, uint8_t);
+StatusTypeDef I2CReadReg(uint8_t, uint8_t, uint8_t*, uint8_t);
+
 StatusTypeDef BMP_SensorInit(void);
 double BMP_GetTemp(void);
+
+StatusTypeDef L3G4200_SensorInit(void);
+uint8_t L3G4200_GetData(SensorData*);
+void L3G4200_PrintData(SensorData*);
 
 
 #endif
