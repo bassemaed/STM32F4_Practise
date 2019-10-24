@@ -34,11 +34,71 @@ int ProgramByByte(uint32_t InAddress, uint32_t InSize, uint8_t* InData){
 	HAL_FLASH_Lock();
 	return 1;
 }
+int ProgramByHalfWord(uint32_t InAddress, uint32_t InSize, uint16_t* InData){
+	HAL_FLASH_Unlock();
+	int i = 0;
+	for(i=0;i< InSize;i++){
+		if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, InAddress, *(InData+i)) == HAL_OK){
+			InAddress = InAddress + 2;
+		}
+		else
+			return 0;
+	}
+	HAL_FLASH_Lock();
+	return 1;
+}
+int ProgramByWord(uint32_t InAddress, uint32_t InSize, uint32_t* InData){
+	HAL_FLASH_Unlock();
+	int i = 0;
+	for(i=0;i< InSize;i++){
+		if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_WORD, InAddress, *(InData+i)) == HAL_OK){
+			InAddress = InAddress + 4;
+		}
+		else
+			return 0;
+	}
+	HAL_FLASH_Lock();
+	return 1;
+}
+int ProgramByDoubleWord(uint32_t InAddress, uint32_t InSize, uint64_t* InData){
+	HAL_FLASH_Unlock();
+	int i = 0;
+	for(i=0;i< InSize;i++){
+		if (HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, InAddress, *(InData+i)) == HAL_OK){
+			InAddress = InAddress + 8;
+		}
+		else
+			return 0;
+	}
+	HAL_FLASH_Lock();
+	return 1;
+}
 void ReadByByte(uint32_t InAddress, uint32_t InSize, uint8_t* InData){
 	int i = 0;
 	for(i = 0;i< InSize;i++){
 		InData[i] = *(__IO uint8_t *)InAddress;
 		InAddress = InAddress + 1;
+	}
+}
+void ReadByHalfWord(uint32_t InAddress, uint32_t InSize, uint16_t* InData){
+	int i = 0;
+	for(i = 0;i< InSize;i++){
+		InData[i] = *(__IO uint16_t *)InAddress;
+		InAddress = InAddress + 2;
+	}
+}
+void ReadByWord(uint32_t InAddress, uint32_t InSize, uint32_t* InData){
+	int i = 0;
+	for(i = 0;i< InSize;i++){
+		InData[i] = *(__IO uint32_t *)InAddress;
+		InAddress = InAddress + 4;
+	}
+}
+void ReadByDoubleWord(uint32_t InAddress, uint32_t InSize, uint64_t* InData){
+	int i = 0;
+	for(i = 0;i< InSize;i++){
+		InData[i] = *(__IO uint64_t *)InAddress;
+		InAddress = InAddress + 8;
 	}
 }
 static uint32_t GetSector(uint32_t Address){

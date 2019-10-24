@@ -33,6 +33,7 @@ int PrintConfig (__const char * format,va_list args);
 int Print (__const char * format, ...);
 int ScanConfig(__const char * format, va_list args);
 int Scan(__const char * format, ...);
+void MPUConfig(void);
 
 #endif /* __CONFIG_H__ */
 

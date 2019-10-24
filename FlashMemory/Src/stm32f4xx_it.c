@@ -37,7 +37,6 @@ void PendSV_Handler(void){
 void SysTick_Handler(void){
     HAL_IncTick();
 }
-
 void DMA1_Stream5_IRQHandler(void){
 }
 
